@@ -51,9 +51,10 @@
     border: none;
     width:100%;
     color: var(--text);
+    cursor: pointer;
 }
 
-.logout.hover{
-    background-color: var(--highlight);
+.logout:hover{
+    background-color: var(--hightlightSoft);
 }
 
