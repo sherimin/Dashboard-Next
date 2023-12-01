@@ -13,14 +13,12 @@ const Dashboard = () => {
           <Card />
           <Card />
         </div>
+        <Transactions />
+        <Chart />
       </div>
-
-      <Transactions />
-      <Chart />
-
-      {/* <div className={styles.side}>
+      <div className={styles.side}>
         <RightBar />
-      </div> */}
+      </div>
     </div>
   )
 }
