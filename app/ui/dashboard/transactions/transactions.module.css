@@ -29,3 +29,22 @@
     object-fit: cover;
     border-radius: 50%;
 }
+
+.status{
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    color: var(--text)
+}
+
+.pending{
+    background-color: var(--textSoft);
+}
+
+.done{
+    background-color: var(--highlight);
+}
+
+.cancelled{
+    background-color: var(--highlightSoft);
+}
