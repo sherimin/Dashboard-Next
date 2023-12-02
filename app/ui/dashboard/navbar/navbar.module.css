@@ -31,7 +31,12 @@
 .input{
     background-color: transparent;
     border: none;
-    color:var(--text)
+    color:var(--text);
+    outline: none;
+}
+
+.input::placeholder{
+    color: var(--text)
 }
 
 .icons{
