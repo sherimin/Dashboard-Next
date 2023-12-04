@@ -45,10 +45,12 @@ const UsersPage = () => {
             <td>Admin</td>
             <td>Active</td>
             <td>
-              <Link href="/">
-                <button className={`${styles.button} ${styles.view}`}>View</button>
-              </Link>
-              <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              <div className={styles.buttons}>
+                <Link href="/">
+                  <button className={`${styles.button} ${styles.view}`}>View</button>
+                </Link>
+                  <button className={`${styles.button} ${styles.delete}`}>Delete</button>
+              </div>
             </td>
           </tr>
         </tbody>
