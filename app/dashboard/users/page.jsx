@@ -10,8 +10,6 @@ const UsersPage = async () => {
   //test data fetching
   const users = await fetchUsers();
 
-  console.log('Test user fetching: ', users);
-
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -37,7 +35,7 @@ const UsersPage = async () => {
 
         <tbody>
           {users.map((user) => (
-                      <tr id={user.id}>
+                      <tr key={user.id}>
                       <td>
                         <div className={styles.user}>
                           <Image 
