@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { MdSearch } from 'react-icons/md'
+import { useDebouncedCallback } from 'use-debounce'
 import styles from './search.module.css'
 
 const Search = ({ placeholder }) => {
@@ -9,7 +10,7 @@ const Search = ({ placeholder }) => {
   const { replace } = useRouter();
   const pathname = usePathname();
 
-  const handleSearch = (e) => {
+  const handleSearch = useDebouncedCallback((e) => {
 
     const params = new URLSearchParams(searchParams);
 
@@ -19,7 +20,7 @@ const Search = ({ placeholder }) => {
       params.delete("q");
     }
     replace(`${pathname}?${params}`)
-  }
+  }, 300);
 
   return (
     <div className={styles.container}>
