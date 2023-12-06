@@ -5,10 +5,11 @@ import styles from "@/app/ui/dashboard/users/users.module.css"
 import Image from "next/image"
 import Link from "next/link"
 
-const UsersPage = async () => {
+const UsersPage = async ({ searchParams }) => {
 
-  //test data fetching
-  const users = await fetchUsers();
+  const q = searchParams?.q || "";
+  const page = searchParams?.page || 1;
+  const users = await fetchUsers(q, page);
 
   return (
     <div className={styles.container}>
