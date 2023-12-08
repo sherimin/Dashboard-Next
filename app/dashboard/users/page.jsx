@@ -1,4 +1,4 @@
-import fetchUsers from "@/app/lib/data"
+import { fetchUsers } from "@/app/lib/data"
 import Pagination from "@/app/ui/dashboard/pagination/pagination"
 import Search from "@/app/ui/dashboard/search/search"
 import styles from "@/app/ui/dashboard/users/users.module.css"
@@ -17,7 +17,7 @@ const UsersPage = async ({ searchParams }) => {
         <Search placeholder="Search for a user" />
         <Link href="/dashboard/users/add">
           <button className={styles.addButton}>
-            Add User
+            Add new user
           </button>
         </Link>
       </div>
@@ -50,7 +50,7 @@ const UsersPage = async ({ searchParams }) => {
                         </div>
                       </td>
                       <td>{user.email}</td>
-                      <td>{user.createdAt?.toString()}</td>
+                      <td>{user.createdAt?.toString().slice(4,16)}</td>
                       <td>{user.isAdmin ? "Admin" : "Client"}</td>
                       <td>{user.isActive ? "Active" : "Deleted"}</td>
                       <td>
