@@ -1,5 +1,8 @@
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { User } from "./models";
 import { connectToDB } from "./utils";
+import bcrypt from "bcrypt";
 
 const addUser = async (formData) => {
     "use server"
@@ -8,10 +11,13 @@ const addUser = async (formData) => {
 
     try {
         connectToDB();
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt)
+
         const newUser = new User({
             username, 
             email, 
-            password, 
+            password: hashedPassword, 
             phone, 
             address, 
             isAdmin, 
@@ -24,6 +30,8 @@ const addUser = async (formData) => {
         console.log(error);
         throw new Error("Fail to add new user.");  
     }
+    revalidatePath("/dashboard/users");
+    redirect("/dashboard/users");
 }
 
 export default addUser
