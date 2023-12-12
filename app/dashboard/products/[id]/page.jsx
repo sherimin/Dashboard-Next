@@ -1,19 +1,25 @@
+import { updateProduct } from '@/app/lib/actions';
+import { fetchProduct } from '@/app/lib/data';
 import styles from '@/app/ui/dashboard/Products/singleProduct/singleProduct.module.css'
 import Image from 'next/image'
 
-const SingleProductPage = () => {
+const SingleProductPage = async ({ params }) => {
+  const { id } = params;
+  const product = await fetchProduct(id);
+
   return (
     <div className={styles.container}>
         <div className={styles.infoContainer}>
             <div className={styles.imgContainer}>
-                <Image src="/noproduct.jpg" alt="productpic" fill />
+                <Image src={product.img || "/noproduct.jpg"} alt="productpic" fill />
             </div>
-            Cherry Blossom Hand Cream
+            {product.title}
         </div>
         <div className={styles.formContainer}>
-            <div className={styles.form}>
+            <form action={updateProduct} className={styles.form}>
+              <input type="hidden" name="id" value={product.id} />
               <label>Title</label>
-              <input type="text" name="title" placeholder='title' />
+              <input type="text" name="title" placeholder={product.title} />
               
               <label>Category</label>
                 <select name="Category" id="category">
@@ -26,26 +32,26 @@ const SingleProductPage = () => {
                 </select>
 
               <label>Price</label>
-              <input type="number" name="password" placeholder='$' />
+              <input type="number" name="price" placeholder={product.price} />
 
               <label>Stock</label>
-              <input type="number" name="phone" placeholder='0' />
+              <input type="number" name="stock" placeholder={product.stock} />
 
               <label>Color</label>
-              <input type="text" name="color" placeholder='default' />
+              <input type="text" name="color" placeholder={product.color} />
 
               <label>Size</label>
-              <input type="text" name="size" placeholder='default' />
+              <input type="text" name="size" placeholder={product.size} />
               
 
               <label>Description</label>
-              <textarea type="text" id="desc" name="desc" placeholder='Description' rows="8" />
+              <textarea type="text" id="desc" name="desc" placeholder={product.desc} rows="8" />
 
               <button>
                 Update
               </button>
 
-            </div>
+            </form>
         </div>
     </div>
   )
