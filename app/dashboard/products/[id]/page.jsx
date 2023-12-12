@@ -1,7 +1,7 @@
-import styles from '@/app/ui/dashboard/Users/singleUser/singleUser.module.css'
+import styles from '@/app/ui/dashboard/Products/singleProduct/singleProduct.module.css'
 import Image from 'next/image'
 
-const SingleUserPage = () => {
+const SingleProductPage = () => {
   return (
     <div className={styles.container}>
         <div className={styles.infoContainer}>
@@ -51,4 +51,4 @@ const SingleUserPage = () => {
   )
 }
 
-export default SingleUserPage
+export default SingleProductPage;
