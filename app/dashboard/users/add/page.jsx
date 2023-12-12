@@ -1,4 +1,4 @@
-import addUser from "@/app/lib/actions"
+import { addUser } from "@/app/lib/actions"
 import styles from "@/app/ui/dashboard/Users/addUser/addUser.module.css"
 
 const AddUserPage = () => {
