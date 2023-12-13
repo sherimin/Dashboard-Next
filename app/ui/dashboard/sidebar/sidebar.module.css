@@ -52,6 +52,7 @@
     width:100%;
     color: var(--text);
     cursor: pointer;
+    font-size: 16px;
 }
 
 .logout:hover{
