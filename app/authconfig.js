@@ -1,4 +1,5 @@
-const authConfig = {
+export const authConfig = {
+    providers:[],
     pages:{
         signin:"/login",
     },
@@ -20,5 +21,3 @@ const authConfig = {
         }
     }
 }
-
-export default authConfig

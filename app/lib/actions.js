@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
 import bcrypt from "bcrypt";
+import { signIn } from "../auth";
 
 const addUser = async (formData) => {
 
@@ -145,5 +146,17 @@ const updateProduct = async (formData) => {
     redirect("/dashboard/products");
 }
 
+const authenticate = async (formData) => {
 
-export { addUser, addProduct, deleteProduct, deleteUser, updateUser, updateProduct }
+    const { username, password } = Object.fromEntries(formData);
+
+    try {
+        await signIn("credentials", { username, password });
+    } catch (error) {
+        console.log('Error in authenticate: ', error);
+        throw error;
+    }
+}
+
+
+export { addUser, addProduct, deleteProduct, deleteUser, updateUser, updateProduct, authenticate }
