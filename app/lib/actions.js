@@ -146,15 +146,14 @@ const updateProduct = async (formData) => {
     redirect("/dashboard/products");
 }
 
-const authenticate = async (formData) => {
+const authenticate = async (prevState, formData) => {
 
     const { username, password } = Object.fromEntries(formData);
 
     try {
         await signIn("credentials", { username, password });
     } catch (error) {
-        console.log('Error in authenticate: ', error);
-        throw error;
+        return "Wrong credentials."
     }
 }
 
