@@ -15,44 +15,44 @@ const data = [
   {
     name: "Sun",
     visit: 4000,
-    click: 2400,
+    order: 2400,
   },
   {
     name: "Mon",
     visit: 3000,
-    click: 1398,
+    order: 1198,
   },
   {
     name: "Tue",
     visit: 2000,
-    click: 3800,
+    order: 3800,
   },
   {
     name: "Wed",
     visit: 2780,
-    click: 3908,
+    order: 3908,
   },
   {
     name: "Thu",
     visit: 1890,
-    click: 4800,
+    order: 4800,
   },
   {
     name: "Fri",
     visit: 2390,
-    click: 3800,
+    order: 3800,
   },
   {
     name: "Sat",
     visit: 3490,
-    click: 4300,
+    order: 4300,
   },
 ];
 
 const Chart = () => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Weekly Summary</h2>
+      <h2 className={styles.title}>Weekly Summary [Demo Data]</h2>
       <ResponsiveContainer width="100%" height="90%">
         <LineChart
           width={500}
@@ -75,7 +75,7 @@ const Chart = () => {
             stroke="#A9A9A9"
             activeDot={{ r: 8 }}
           />
-          <Line type="monotone" dataKey="click" stroke="#408EC6" />
+          <Line type="monotone" dataKey="order" stroke="#408EC6" />
         </LineChart>
       </ResponsiveContainer>
     </div>

@@ -7,9 +7,7 @@ import styles from "./loginForm.module.css";
 const LoginForm = () => {
   const [state, formAction] = useFormState(authenticate, undefined);
 
-
   return (
-    <div className={styles.container}>
       <form className={styles.form} action={formAction}>
         <h1>Please login</h1>
         <input type="text" placeholder="Username" name="username" />
@@ -17,8 +15,8 @@ const LoginForm = () => {
         <button>Login</button>
         {state && state}
       </form>
-    </div>
   );
 };
 
 export default LoginForm;
+

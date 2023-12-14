@@ -161,6 +161,7 @@ const authenticate = async (prevState, formData) => {
 
   try {
     await signIn("credentials", { username, password });
+    console.log('From authenticate***: ', username, ' password: ', password);
   } catch (error) {
     console.log('Error in authenticate: ', error);
     return "Wrong credentials.";

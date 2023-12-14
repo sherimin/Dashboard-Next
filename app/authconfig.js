@@ -1,5 +1,5 @@
 export const authConfig = {
-  providers: [],
+  providers:[],
   pages: {
     signIn: "/login",
   },
@@ -7,7 +7,6 @@ export const authConfig = {
     authorized({ auth, request }) {
       const isLoggedIn = auth?.user;
       const isOnDashboard = request.nextUrl.pathname.startsWith("/dashboard");
-
       if (isOnDashboard) {
         if (isLoggedIn) return true;
         return false;
