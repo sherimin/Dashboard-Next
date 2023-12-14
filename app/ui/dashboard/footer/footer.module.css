@@ -1,15 +1,15 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 40px;
-    color: var(--text)
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  color: var(--text);
 }
 
-.logo{
-    font-weight: bold;
+.logo {
+  font-weight: bold;
 }
 
-.text{
-    font-size: 12px;
+.text {
+  font-size: 12px;
 }

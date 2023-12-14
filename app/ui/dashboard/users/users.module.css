@@ -1,61 +1,61 @@
-.container{
-    background-color: var(--bgSoft);
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+.container {
+  background-color: var(--bgSoft);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.addButton{
-    padding: 10px;
-    background-color: var(--highlight);
-    color: var(--text);
-    border:none;
-    border-radius: 5px;
-    cursor: pointer;
+.addButton {
+  padding: 10px;
+  background-color: var(--highlight);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.table{
-    width: 100%;
+.table {
+  width: 100%;
 }
 
-.table td{
-    padding: 10px;
+.table td {
+  padding: 10px;
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .userImage {
-    border-radius: 50%;
-    object-fit: cover;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.buttons{
-    display: flex;
-    gap: 10px;
+.buttons {
+  display: flex;
+  gap: 10px;
 }
 
-.button{
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: var(--text);
-    border: none;
-    cursor: pointer;
+.button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--text);
+  border: none;
+  cursor: pointer;
 }
 
-.view{
-    background-color: var(--highlight);
+.view {
+  background-color: var(--highlight);
 }
 
-.delete{
-    background-color: var(--highlightSoft);
+.delete {
+  background-color: var(--highlightSoft);
 }

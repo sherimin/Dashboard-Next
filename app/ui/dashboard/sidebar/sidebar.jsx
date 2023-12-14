@@ -1,4 +1,4 @@
-import styles from "./sidebar.module.css"
+import styles from "./sidebar.module.css";
 import {
   MdDashboard,
   MdSupervisedUserCircle,
@@ -80,11 +80,17 @@ const menuItems = [
 
 const Sidebar = async () => {
   const { user } = await auth();
-  
+
   return (
     <div className={styles.container}>
       <div className="styles.user">
-        <Image src={user.img || "/noavatar.png"} alt="ProfilePic" width="50" height="50" className="styles.userImage" />
+        <Image
+          src={user.img || "/noavatar.png"}
+          alt="ProfilePic"
+          width="50"
+          height="50"
+          className="styles.userImage"
+        />
         <div className="styles.userDetail">
           <span className={styles.username}>{user.username}</span>
           <br />
@@ -92,30 +98,29 @@ const Sidebar = async () => {
         </div>
       </div>
       <ul className={styles.list}>
-        {menuItems.map(category => (
+        {menuItems.map((category) => (
           <li key={category.title}>
-            <span className={styles.category}>
-              {category.title}
-            </span>
+            <span className={styles.category}>{category.title}</span>
 
-            {category.list.map(item => (
+            {category.list.map((item) => (
               <MenuLink item={item} key={item.title} />
             ))}
           </li>
         ))}
       </ul>
-      <form action={async () => {
-        "use server"
-        await signOut();
-      }}>
+      <form
+        action={async () => {
+          "use server";
+          await signOut();
+        }}
+      >
         <button className={styles.logout}>
           <MdLogout />
           Logout
         </button>
       </form>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

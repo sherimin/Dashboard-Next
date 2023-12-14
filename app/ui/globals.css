@@ -1,24 +1,24 @@
-:root{
-    --bg:#002349;
-    --bgSoft:#19385b;
-    --text: #E3E6EE ;
-    --textSoft:#BFA181;
-    --highlight:#465F7B;
-    --highlightSoft:#7A2048;
+:root {
+  --bg: #002349;
+  --bgSoft: #19385b;
+  --text: #e3e6ee;
+  --textSoft: #bfa181;
+  --highlight: #465f7b;
+  --highlightSoft: #7a2048;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--bg);
-    color:var(--text);
+body {
+  background-color: var(--bg);
+  color: var(--text);
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }

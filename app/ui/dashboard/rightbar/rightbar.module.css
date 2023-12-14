@@ -1,61 +1,60 @@
-.container{
-    position: fixed;
+.container {
+  position: fixed;
 }
 
-.item{
-    position: relative;
-    background: linear-gradient(#7A2048,#002349);
-    padding: 20px 0px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.item {
+  position: relative;
+  background: linear-gradient(#7a2048, #002349);
+  padding: 20px 0px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-
-.bgContainer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
+.bgContainer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
 }
 
-.bg{
-    object-fit: contain;
-    opacity: 0.25;
+.bg {
+  object-fit: contain;
+  opacity: 0.25;
 }
 
-.text{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.notification{
-    font-weight: bold;
+.notification {
+  font-weight: bold;
 }
 
-.title{
-    font-weight: 500;
-    font-size: 14px;
-    color: var(--text)
+.title {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text);
 }
 
-.subtitle{
-    font-weight: 500;
-    font-size: 10px;
-    color: var(--textSoft)
+.subtitle {
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--textSoft);
 }
 
-.button{
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    background-color: var(--highlight);
-    color: var(--text);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: max-content;
-    margin-top: 5px;
+.button {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--highlight);
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: max-content;
+  margin-top: 5px;
 }

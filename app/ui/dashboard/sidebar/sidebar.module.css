@@ -1,61 +1,60 @@
-.container{
-    position: sticky;
-    top: 40px;
+.container {
+  position: sticky;
+  top: 40px;
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
+.user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-.userImage{
-    border-radius: 50%;
-    object-fit: cover;
+.userImage {
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.userDetail{
-    display: flex;
-    flex-direction: column;
+.userDetail {
+  display: flex;
+  flex-direction: column;
 }
 
-.username{
-    font-weight: 500;
+.username {
+  font-weight: 500;
 }
 
-.userTitle{
-    font-style: 12px;
-    color:var(--textSoft)
+.userTitle {
+  font-style: 12px;
+  color: var(--textSoft);
 }
 
-.list{
-    list-style: none;
+.list {
+  list-style: none;
 }
 
-.category{
-    color: var(--textSoft);
-    font-weight: bold;
-    font-size: 13px;
-    margin: 10px 0px;
+.category {
+  color: var(--textSoft);
+  font-weight: bold;
+  font-size: 13px;
+  margin: 10px 0px;
 }
 
-.logout{
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap:10px;
-    margin: 5px 0px;
-    border-radius: 10px;
-    background: none;
-    border: none;
-    width:100%;
-    color: var(--text);
-    cursor: pointer;
-    font-size: 16px;
+.logout {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  background: none;
+  border: none;
+  width: 100%;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.logout:hover{
-    background-color: var(--highlightSoft);
+.logout:hover {
+  background-color: var(--highlightSoft);
 }
-

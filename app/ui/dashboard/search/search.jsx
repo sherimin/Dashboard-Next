@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { MdSearch } from 'react-icons/md'
-import { useDebouncedCallback } from 'use-debounce'
-import styles from './search.module.css'
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { MdSearch } from "react-icons/md";
+import { useDebouncedCallback } from "use-debounce";
+import styles from "./search.module.css";
 
 const Search = ({ placeholder }) => {
   const searchParams = useSearchParams();
@@ -11,7 +11,6 @@ const Search = ({ placeholder }) => {
   const pathname = usePathname();
 
   const handleSearch = useDebouncedCallback((e) => {
-
     const params = new URLSearchParams(searchParams);
 
     params.set("page", 1);
@@ -21,15 +20,20 @@ const Search = ({ placeholder }) => {
     } else {
       params.delete("q");
     }
-    replace(`${pathname}?${params}`)
+    replace(`${pathname}?${params}`);
   }, 300);
 
   return (
     <div className={styles.container}>
-        <MdSearch />
-        <input type="text" placeholder={placeholder} className={styles.input} onChange={handleSearch} />
+      <MdSearch />
+      <input
+        type="text"
+        placeholder={placeholder}
+        className={styles.input}
+        onChange={handleSearch}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

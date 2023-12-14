@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import styles from './transactions.module.css'
+import Image from "next/image";
+import styles from "./transactions.module.css";
 
 const Transactions = () => {
   return (
@@ -19,13 +19,21 @@ const Transactions = () => {
           <tr>
             <td>
               <div className={styles.user}>
-              <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
-              Rachelle R.
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                Rachelle R.
               </div>
             </td>
-            
+
             <td>
-              <span className={`${styles.status} ${styles.pending}`}>Pending</span>
+              <span className={`${styles.status} ${styles.pending}`}>
+                Pending
+              </span>
             </td>
             <td>30.11.2023</td>
             <td>$ 52.90</td>
@@ -33,14 +41,22 @@ const Transactions = () => {
 
           <tr>
             <td>
-            <div className={styles.user}>
-              <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
-              Julia C.
-            </div>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                Julia C.
+              </div>
             </td>
-            
+
             <td>
-              <span className={`${styles.status} ${styles.cancelled}`}>Cancelled</span>
+              <span className={`${styles.status} ${styles.cancelled}`}>
+                Cancelled
+              </span>
             </td>
             <td>29.11.2023</td>
             <td>$ 102.40</td>
@@ -49,13 +65,21 @@ const Transactions = () => {
           <tr>
             <td>
               <div className={styles.user}>
-              <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
-              Zach E.
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                Zach E.
               </div>
             </td>
-            
+
             <td>
-              <span className={`${styles.status} ${styles.pending}`}>Pending</span>
+              <span className={`${styles.status} ${styles.pending}`}>
+                Pending
+              </span>
             </td>
             <td>26.11.2023</td>
             <td>$ 32.81</td>
@@ -64,11 +88,17 @@ const Transactions = () => {
           <tr>
             <td>
               <div className={styles.user}>
-              <Image src="/noavatar.png" alt="" width={40} height={40} className={styles.userImage} />
-              Katlyn T.
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                Katlyn T.
               </div>
             </td>
-            
+
             <td>
               <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
@@ -78,7 +108,7 @@ const Transactions = () => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};
 
-export default Transactions
+export default Transactions;
