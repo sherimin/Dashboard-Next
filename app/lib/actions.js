@@ -96,16 +96,20 @@ const updateUser = async (formData) => {
   try {
     connectToDB();
 
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const updateFields = {
       username,
       email,
-      password,
+      password: hashedPassword,
       phone,
       address,
       isAdmin,
       isActive,
     };
 
+    //no update for this field if no input 
     Object.keys(updateFields).forEach(
       (key) =>
         (updateFields[key] === "" || undefined) && delete updateFields[key],
@@ -137,6 +141,7 @@ const updateProduct = async (formData) => {
       desc,
     };
 
+    //no update for this field if no input 
     Object.keys(updateFields).forEach(
       (key) =>
         (updateFields[key] === "" || undefined) && delete updateFields[key],
@@ -157,6 +162,7 @@ const authenticate = async (prevState, formData) => {
   try {
     await signIn("credentials", { username, password });
   } catch (error) {
+    console.log('Error in authenticate: ', error);
     return "Wrong credentials.";
   }
 };

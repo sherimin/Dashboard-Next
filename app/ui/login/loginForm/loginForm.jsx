@@ -7,10 +7,6 @@ import styles from "./loginForm.module.css";
 const LoginForm = () => {
   const [state, formAction] = useFormState(authenticate, undefined);
 
-  // const handleLogin = async (formData) => {
-  //     const data = await authenticate(formData);
-  //     data.error && setErr(data.error)
-  // }
 
   return (
     <div className={styles.container}>
