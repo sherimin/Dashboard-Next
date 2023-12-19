@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
 import bcrypt from "bcrypt";
-import { signIn } from "../auth";
+import { signIn } from "@/app/auth";
 
 const addUser = async (formData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
@@ -157,16 +157,14 @@ const updateProduct = async (formData) => {
 };
 
 const authenticate = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
-
-  try {
-    await signIn("credentials", { username, password });
-    console.log('From authenticate***: ', username, ' password: ', password);
-  } catch (error) {
-    console.log('Error in authenticate: ', error);
-    return "Wrong credentials.";
-  }
-};
+    const { username, password } = Object.fromEntries(formData);
+  
+    try {
+      await signIn("credentials", { username, password });
+    } catch (err) {
+      return "### Wrong Credentials ###";
+    }
+  };
 
 export {
   addUser,
