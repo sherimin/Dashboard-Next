@@ -18,7 +18,6 @@ const login = async (credentials) => {
     );
 
     if (!isPasswordCorrect) throw new Error("Wrong password.");
-
     return user;
   } catch (err) {
     console.log(err);
@@ -33,9 +32,10 @@ export const { signIn, signOut, auth } = NextAuth({
       async authorize(credentials) {
         try {
           const user = await login(credentials);
-          // console.log('user in signIn: ', user); => correct
+          // console.log('user in signIn: ', user);
           return user;
         } catch (err) {
+          console.log('err: ', err);
           return null;
         }
       },
