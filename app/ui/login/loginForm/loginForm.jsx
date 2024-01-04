@@ -14,6 +14,7 @@ const LoginForm = () => {
         <input type="password" placeholder="password" name="password" />
         <button>Login</button>
         {state && state}
+        <button>Register</button>
       </form>
   );
 };
