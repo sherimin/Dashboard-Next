@@ -1,5 +1,5 @@
 export const authConfig = {
-  providers:[],
+  providers: [],
   pages: {
     signIn: "/login",
   },
@@ -13,8 +13,7 @@ export const authConfig = {
         } else {
           return false;
         }
-      } else if (isLoggedIn) {    
-        // console.log('******************request: ', request.nextUrl);
+      } else if (isLoggedIn) {
         return Response.redirect(new URL("/dashboard", request.nextUrl));
       }
       return true;

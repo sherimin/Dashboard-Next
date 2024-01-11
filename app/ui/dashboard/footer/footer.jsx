@@ -4,7 +4,6 @@ import styles from "./footer.module.css";
 const Footer = () => {
   return (
     <div className={styles.container}>
-      
       <div className={styles.text}>
         {" "}
         {new Date().getFullYear()} &copy; All Rights Reserved
@@ -17,7 +16,6 @@ const Footer = () => {
           &#x1F4E7; Sheri Lu &#x1F58B;{" "}
         </Link>{" "}
       </div>
-      
     </div>
   );
 };

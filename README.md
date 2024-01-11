@@ -1,8 +1,8 @@
 ## About Dashboard
 
-This dashboard is designed for e-commerce administrators to track client and staff metrics, manage product databases and stay informed on company news. 
+This dashboard is designed for e-commerce administrators to track client and staff metrics, manage product databases and stay informed on company news.
 
-This platform allows administrators to add, update, delete, and search users and products. Demo data is displayed on the homepage to visualize the total number of clients, orders and visits to the website, as well as the status of latest orders and weekly business analysis. Users will also see company newsletters from the right bar. 
+This platform allows administrators to add, update, delete, and search users and products. Demo data is displayed on the homepage to visualize the total number of clients, orders and visits to the website, as well as the status of latest orders and weekly business analysis. Users will also see company newsletters from the right bar.
 
 ##### Built with Next.js, Next-Auth and MongoDB.
 
@@ -20,9 +20,7 @@ Add, edit, delete and search for products
 
 https://github.com/sherimin/Dashboard-Next/assets/109632584/af5d7f28-8c7e-4efc-8f1f-c7dee9c5d355
 
-
 Logout and redirect to login page
-
 
 https://github.com/sherimin/Dashboard-Next/assets/109632584/51cb396c-9706-4bd9-8b46-10a53d77e3b5
 
@@ -32,4 +30,3 @@ https://github.com/sherimin/Dashboard-Next/assets/109632584/51cb396c-9706-4bd9-8
 2. Install all dependencies using the `npm install` command.
 3. Run `npm run dev` to start.
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-

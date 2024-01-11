@@ -31,7 +31,7 @@
   width: 100%;
 }
 
-.form button:hover{
+.form button:hover {
   background-color: var(--bgSoft);
   border: solid;
   border-radius: 5px;

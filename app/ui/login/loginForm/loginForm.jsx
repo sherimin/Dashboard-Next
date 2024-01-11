@@ -8,16 +8,15 @@ const LoginForm = () => {
   const [state, formAction] = useFormState(authenticate, undefined);
 
   return (
-      <form className={styles.form} action={formAction}>
-        <h1>Please login</h1>
-        <input type="text" placeholder="username" name="username" />
-        <input type="password" placeholder="password" name="password" />
-        <button>Login</button>
-        {state && state}
-        <button>Register</button>
-      </form>
+    <form className={styles.form} action={formAction}>
+      <h1>Please login</h1>
+      <input type="text" placeholder="username" name="username" />
+      <input type="password" placeholder="password" name="password" />
+      <button>Login</button>
+      {state && state}
+      {/* <a href="/registration" className="hover:font-bold">Register</a> */}
+    </form>
   );
 };
 
 export default LoginForm;
-

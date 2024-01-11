@@ -109,7 +109,7 @@ const updateUser = async (formData) => {
       isActive,
     };
 
-    //no update for this field if no input 
+    //no update for this field if no input
     Object.keys(updateFields).forEach(
       (key) =>
         (updateFields[key] === "" || undefined) && delete updateFields[key],
@@ -141,7 +141,7 @@ const updateProduct = async (formData) => {
       desc,
     };
 
-    //no update for this field if no input 
+    //no update for this field if no input
     Object.keys(updateFields).forEach(
       (key) =>
         (updateFields[key] === "" || undefined) && delete updateFields[key],
@@ -157,15 +157,15 @@ const updateProduct = async (formData) => {
 };
 
 const authenticate = async (prevState, formData) => {
-    const { username, password } = Object.fromEntries(formData);
-    try {
-      await signIn("credentials", { username, password, redirect: false });
-    } catch (err) {
-      return "### Wrong Credentials ###";
-    }
+  const { username, password } = Object.fromEntries(formData);
+  try {
+    await signIn("credentials", { username, password, redirect: false });
+  } catch (err) {
+    return "### Wrong Credentials ###";
+  }
 
-    redirect("/dashboard");
-  };
+  redirect("/dashboard");
+};
 
 export {
   addUser,
