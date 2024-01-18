@@ -14,7 +14,7 @@ const LoginForm = () => {
       <input type="password" placeholder="password" name="password" />
       <button>Login</button>
       {state && state}
-      {/* <a href="/registration" className="hover:font-bold">Register</a> */}
+      <a href="/registration" className="hover:font-bold underline underline-solid">Register</a>
     </form>
   );
 };

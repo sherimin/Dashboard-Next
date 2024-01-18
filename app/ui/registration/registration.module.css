@@ -1,114 +1,39 @@
-/* .container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form {
-  background-color: var(--bgSoft);
-  padding: 50px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  width: 85%;
-  height: 800px;
-  overflow: hidden;
-}
-
-.form input {
-  padding: 30px;
-  border: 2px solid var(--highlight);
-  border-radius: 5px;
-  background-color: var(--bgSoft);
-  color: var(--text);
-  width: 100%;
-}
-
-.form select {
-  flex-direction: row;
-}
-
-.form button {
-  padding: 20px;
-  background-color: var(--textSoft);
-  color: var(--bg);
-  font: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.form textarea {
-  width: 100%;
-  border: 2px solid var(--highlight);
-  border-radius: 5px;
-  background-color: var(--bgSoft);
-} */
-.h2 {
-  align-items: center;
-  justify-content: center;
-}
-
 .container {
-  /* background-color: var(--bgSoft); */
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-  background-color: blanchedalmond;
-  width: 80%;
-  align-items: center;
-  justify-content: center;
-}
-
-.form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: var(--text);
-  background-color: coral;
-}
-
-.form input,
-.form textarea,
-.form select {
-  padding: 30px;
-  background-color: var(--bg);
-  color: var(--text);
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  width: 45%;
-}
-
-.form input {
-  width: 45%;
-}
-
-.form input::placeholder {
-  color: var(--text);
-  opacity: 1;
-}
-
-.form textarea {
-  width: 100%;
-  color: var(--text);
-}
-
-.form textarea::placeholder {
-  color: var(--text);
-  opacity: 1;
-}
-
-.form button {
-  width: 100%;
-  padding: 30px;
-  background-color: var(--textSoft);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form {
+    background-color: var(--bgSoft);
+    padding: 50px;
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .form input {
+    padding: 30px;
+    border: 2px solid var(--highlight);
+    border-radius: 5px;
+    background-color: var(--bgSoft);
+    color: var(--text);
+    width: 100%;
+  }
+  
+  .form button {
+    padding: 20px;
+    background-color: var(--textSoft);
+    color: var(--bg);
+    font: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
