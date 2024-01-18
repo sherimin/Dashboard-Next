@@ -34,8 +34,16 @@
 .form button:hover {
   background-color: var(--bgSoft);
   border: solid;
+  border-width: 1px;
   border-radius: 5px;
   border-color: var(--textSoft);
   color: var(--textSoft);
   font-weight: bold;
+}
+
+.form button {
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: var(--textSoft);
 }
